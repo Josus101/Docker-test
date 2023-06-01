@@ -6,7 +6,7 @@ services:
         deploy:
             Labels:
                 com.centurylinklabs.watchtower.enable: "true"
-        container_name: website1 #Your firstname-"usernameAtSchool"
+        container_name: website1 #Your firstname-"JReiher"
         restart: always
         ports:
             - "80:80" #Change first port if using nginx
