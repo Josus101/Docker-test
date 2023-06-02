@@ -1,0 +1,124 @@
+/* Startsetup */
+
+#mainGame {
+    display: none;
+}
+
+#levelMenu {
+    display: none;
+}
+
+#pauseMenu {
+    display: none;
+}
+
+#pause {
+    display: grid;
+}
+
+#options {
+    display: none;
+}
+
+
+
+/* Bakgrunn */
+body{
+    /* Eg fekk ikkje heilt te å lasta ned som gif så eg bare tok heile adressen */
+    background-image: url(https://cdnb.artstation.com/p/assets/images/images/010/170/331/original/damian-gasinski-starslandsape-export.gif?1522944370);
+    height: 825px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    /* Hvis denne endres te margin-top så bare fucke det med bakgrunnen */
+    padding-top: 15%;
+}
+
+p {
+    color: white;
+    text-align: center;
+}
+
+button {
+    border: 3px solid rgb(3,37,126);
+    background-color: rgb(3,37,126);
+    padding: 15px 32px;
+    margin-top: 2%;
+    
+    text-decoration: none;
+    color: white;
+
+    border-radius: 4px;
+
+    transition-duration: 0.3s;
+}
+
+button:hover {
+    border: 3px solid white;
+    background-color: rgba(3,37,126, 0.3);
+}
+
+.placeholder {
+    /* Dette e bare ein placeholder for å konna centera startknappen
+    ellers måtte eg ha brukt faen flex eller grid eller någe bullshit */
+    margin-top: 10%;
+    text-align: center;
+}
+
+/* Shit for resten */
+canvas {
+    /* Sette canvas te midten av skjermen og shit */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+    width: 900px;
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+fieldset {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+legend {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.pauseButtons, .levelButton {
+    height: 55px;
+    grid-column: 2 / 3;
+}
+/* 
+#buttonResume {
+    grid-row: 1;
+}
+#buttonOptions {
+    grid-row: 2;
+}
+
+#buttonLevels {
+    grid-row: 3;
+}
+
+#buttonMainMenu {
+    grid-row: 4;
+} */
+
