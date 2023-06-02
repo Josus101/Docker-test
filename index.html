@@ -1,11 +1,73 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Docker test</title>
-  </head>
-  <body>
-    <p>Hei</p>
-  </body>
+    <head>
+        <meta charset="UTF-8">
+        <title>The Wall</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="shapes.js"></script>
+        <script src="ball.js"></script>
+        <script src="brick.js"></script>
+        <script src="player.js"></script>
+        <script src="code.js" defer></script>
+    </head>
+    <body>
+        
+        <!-- Home screen -->
+        <section id="mainMenu" >
+            <h1>The Wall</h1>
+            <p>Made by: <br> PlzGiOssSekser Entertainment™ </p>
+            <section class="placeholder">
+                <button class="startPageButtons" onclick="initializeGame()">Start Game</button>
+                <br>
+                <button class="startPageButtons" onclick="showLevels()">Levels</button>
+            </section>
+        </section>
+
+        <!-- Main Game -->
+        <section id="mainGame">
+            <button id="btnPause">Pause</button>
+            <canvas id="canvasGFX" width="900" height="600"></canvas>
+        </section>
+
+        <!-- Levels -->
+        <section id="levelMenu">
+            <fieldset id="fieldsetLevels">
+                <legend>Levels</legend>
+                <button id="level1" class="levelButton">Level 1</button>
+                <button id="level2" class="levelButton">Level 2</button>
+                <button id="level3" class="levelButton">Level 3</button>
+                <button id="buttonBack" class="levelButton">Back</button>
+            </fieldset>
+        </section>
+
+        <!-- Flere fieldset til menu -->
+        <section id="pauseMenu">
+            <fieldset id="pause">
+                <legend>Pause</legend>
+                <button id="buttonResume" class="pauseButtons">Resume</button>
+                <button id="buttonOptions" class="pauseButtons">Options</button>
+                <button id="buttonLevels" class="pauseButtons">Levels</button>
+                <button id="buttonMainMenu" class="pauseButtons">Main Menu</button>
+            </fieldset>
+        
+            <fieldset id="options">
+                <legend>Options</legend>
+            
+                <label for="volume">Master Volume</label>
+                <input name="volume" type="range" id="Master Volume" min="0" max="100" value="100">
+                <label for="volume" id="volumeValue">100</label>
+
+                <label for="musicVolume">Music</label>
+                <input name="musicVolume" type="range" id="musicVolume" min="0" max="100" value="100">
+                <label for="musicVolume" id="musicValue">100</label>
+
+                <label for="SFXVolume">SFX</label>
+                <input name="SFXVolume" type="range" id="SFXVolume" min="0" max="100" value="100">
+                <label for="SFXVolume" id="SFXValue">100</label>
+            
+            
+                <button id="btnBackToPause" class="pauseButtons">Back</button>
+            </fieldset>
+        </section>
+    </body>
 </html>
